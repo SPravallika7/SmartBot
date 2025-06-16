@@ -8,7 +8,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-// Replace with your real Gemini API Key
+
 const genAI = new GoogleGenerativeAI('AIzaSyCbBHjpe4zHgHG-vo-4nlu_DPcYMU7C1yM'); 
 
 app.post('/ask', async (req, res) => {
@@ -26,5 +26,5 @@ app.post('/ask', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`✅ Server running at http://localhost:${port}`);
+  console.log(` Server running at http://localhost:${port}`);
 });
