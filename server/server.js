@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
@@ -7,6 +8,7 @@ const port = 3000;
 
 app.use(cors());
 app.use(express.json());
+//  Initialize genAI using the API key from .env
 
 
 const genAI = new GoogleGenerativeAI('AIzaSyCbBHjpe4zHgHG-vo-4nlu_DPcYMU7C1yM'); 
